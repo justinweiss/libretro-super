@@ -1490,6 +1490,8 @@ if [ "${PLATFORM}" == "ctr" ] && [ "${RA}" == "YES" ]; then
 		cd $WORK/$RADIR
 		echo "$PWD"
 
+    if [ "${PACKAGE}" == "YES" ]; then
+
 		echo 'Packaging'
 
 		cp retroarch.cfg retroarch.default.cfg
@@ -1515,6 +1517,7 @@ if [ "${PLATFORM}" == "ctr" ] && [ "${RA}" == "YES" ]; then
 		cp -r $WORK/$RADIR/media/assets/rgui $WORK/$RADIR/pkg/ctr/build/retroarch/media/
 
 		convert_xmb_assets $WORK/$RADIR/media/assets/xmb $WORK/$RADIR/pkg/ctr/build/retroarch/media/xmb 64x32! 400x240! 90
+    fi
 	fi
 fi
 
